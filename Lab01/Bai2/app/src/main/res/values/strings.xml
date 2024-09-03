@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Bai2</string>
+    <string name="rand">Random Number</string>
+    <string name="span">Tap to roll the dice</string>
+</resources>
