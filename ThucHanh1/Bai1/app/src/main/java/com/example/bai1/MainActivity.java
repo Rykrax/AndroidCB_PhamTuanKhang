@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -47,59 +48,90 @@ public class MainActivity extends AppCompatActivity {
         return gcd(b,a%b);
     }
 
+    public boolean checkValue() {
+        if (edtA.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Nhập giá trị a", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if (edtB.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Nhập giá trị b", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
+
+
+    public int tryParseInt(String value, int defaultVal) {
+        try {
+            return Integer.parseInt(value);
+        } catch (NumberFormatException e) {
+            return defaultVal;
+        }
+    }
+
     public void actionView() {
         btnSum.setOnClickListener(view -> {
-            try {
-                int a = Integer.parseInt(edtA.getText().toString());
-                int b = Integer.parseInt(edtB.getText().toString());
+            if (!checkValue()) return;
+            int a = tryParseInt(edtA.getText().toString(),-10);
+            int b = tryParseInt(edtB.getText().toString(),-10);
+            if (a==-10) {
+                Toast.makeText(this, "Dữ liệu a không phù hợp", Toast.LENGTH_SHORT).show();
+            } else if (b==-10) {
+                Toast.makeText(this, "Dữ liệu b không phù hợp", Toast.LENGTH_SHORT).show();
+            } else {
                 tvResult.setText(String.valueOf(a+b));
-            }
-            catch(Exception ex) {
-                Log.e("Error:", ex.getMessage());
             }
         });
 
         btnSub.setOnClickListener(view -> {
-            try {
-                int a = Integer.parseInt(edtA.getText().toString());
-                int b = Integer.parseInt(edtB.getText().toString());
+            if (!checkValue()) return;
+            int a = tryParseInt(edtA.getText().toString(),-10);
+            int b = tryParseInt(edtB.getText().toString(),-10);
+            if (a==-10) {
+                Toast.makeText(this, "Dữ liệu a không phù hợp", Toast.LENGTH_SHORT).show();
+            } else if (b==-10) {
+                Toast.makeText(this, "Dữ liệu b không phù hợp", Toast.LENGTH_SHORT).show();
+            } else {
                 tvResult.setText(String.valueOf(a-b));
-            }
-            catch(Exception ex) {
-                Log.e("Error:", ex.getMessage());
             }
         });
 
         btnMul.setOnClickListener(view -> {
-            try {
-                int a = Integer.parseInt(edtA.getText().toString());
-                int b = Integer.parseInt(edtB.getText().toString());
+            if (!checkValue()) return;
+            int a = tryParseInt(edtA.getText().toString(),-10);
+            int b = tryParseInt(edtB.getText().toString(),-10);
+            if (a==-10) {
+                Toast.makeText(this, "Dữ liệu a không phù hợp", Toast.LENGTH_SHORT).show();
+            } else if (b==-10) {
+                Toast.makeText(this, "Dữ liệu b không phù hợp", Toast.LENGTH_SHORT).show();
+            } else {
                 tvResult.setText(String.valueOf(a*b));
-            }
-            catch(Exception ex) {
-                Log.e("Error:", ex.getMessage());
             }
         });
 
         btnDiv.setOnClickListener(view -> {
-            try {
-                int a = Integer.parseInt(edtA.getText().toString());
-                int b = Integer.parseInt(edtB.getText().toString());
+            if (!checkValue()) return;
+            int a = tryParseInt(edtA.getText().toString(),-10);
+            int b = tryParseInt(edtB.getText().toString(),-10);
+            if (a==-10) {
+                Toast.makeText(this, "Dữ liệu a không phù hợp", Toast.LENGTH_SHORT).show();
+            } else if (b==-10) {
+                Toast.makeText(this, "Dữ liệu b không phù hợp", Toast.LENGTH_SHORT).show();
+            } else {
                 tvResult.setText(String.valueOf(a/b));
-            }
-            catch(Exception ex) {
-                Log.e("Error:", ex.getMessage());
             }
         });
 
         btnGcd.setOnClickListener(view -> {
-            try {
-                int a = Integer.parseInt(edtA.getText().toString());
-                int b = Integer.parseInt(edtB.getText().toString());
+            if (!checkValue()) return;
+            int a = tryParseInt(edtA.getText().toString(),-10);
+            int b = tryParseInt(edtB.getText().toString(),-10);
+            if (a==-10) {
+                Toast.makeText(this, "Dữ liệu a không phù hợp", Toast.LENGTH_SHORT).show();
+            } else if (b==-10) {
+                Toast.makeText(this, "Dữ liệu b không phù hợp", Toast.LENGTH_SHORT).show();
+            } else {
                 tvResult.setText(String.valueOf(gcd(a,b)));
-            }
-            catch(Exception ex) {
-                Log.e("Error:", ex.getMessage());
             }
         });
 
