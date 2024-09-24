@@ -75,9 +75,11 @@ public class MainActivity extends AppCompatActivity {
             int a = tryParseInt(edtA.getText().toString(),-10);
             int b = tryParseInt(edtB.getText().toString(),-10);
             if (a==-10) {
-                Toast.makeText(this, "Dữ liệu a không phù hợp", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dữ liệu a không phù hợp",
+                        Toast.LENGTH_SHORT).show();
             } else if (b==-10) {
-                Toast.makeText(this, "Dữ liệu b không phù hợp", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dữ liệu b không phù hợp",
+                        Toast.LENGTH_SHORT).show();
             } else {
                 tvResult.setText(String.valueOf(a+b));
             }
@@ -88,9 +90,11 @@ public class MainActivity extends AppCompatActivity {
             int a = tryParseInt(edtA.getText().toString(),-10);
             int b = tryParseInt(edtB.getText().toString(),-10);
             if (a==-10) {
-                Toast.makeText(this, "Dữ liệu a không phù hợp", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dữ liệu a không phù hợp",
+                        Toast.LENGTH_SHORT).show();
             } else if (b==-10) {
-                Toast.makeText(this, "Dữ liệu b không phù hợp", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dữ liệu b không phù hợp",
+                        Toast.LENGTH_SHORT).show();
             } else {
                 tvResult.setText(String.valueOf(a-b));
             }
@@ -101,9 +105,11 @@ public class MainActivity extends AppCompatActivity {
             int a = tryParseInt(edtA.getText().toString(),-10);
             int b = tryParseInt(edtB.getText().toString(),-10);
             if (a==-10) {
-                Toast.makeText(this, "Dữ liệu a không phù hợp", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dữ liệu a không phù hợp",
+                        Toast.LENGTH_SHORT).show();
             } else if (b==-10) {
-                Toast.makeText(this, "Dữ liệu b không phù hợp", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dữ liệu b không phù hợp",
+                        Toast.LENGTH_SHORT).show();
             } else {
                 tvResult.setText(String.valueOf(a*b));
             }
@@ -114,9 +120,11 @@ public class MainActivity extends AppCompatActivity {
             int a = tryParseInt(edtA.getText().toString(),-10);
             int b = tryParseInt(edtB.getText().toString(),-10);
             if (a==-10) {
-                Toast.makeText(this, "Dữ liệu a không phù hợp", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dữ liệu a không phù hợp",
+                        Toast.LENGTH_SHORT).show();
             } else if (b==-10) {
-                Toast.makeText(this, "Dữ liệu b không phù hợp", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dữ liệu b không phù hợp",
+                        Toast.LENGTH_SHORT).show();
             } else {
                 tvResult.setText(String.valueOf(a/b));
             }
@@ -127,9 +135,11 @@ public class MainActivity extends AppCompatActivity {
             int a = tryParseInt(edtA.getText().toString(),-10);
             int b = tryParseInt(edtB.getText().toString(),-10);
             if (a==-10) {
-                Toast.makeText(this, "Dữ liệu a không phù hợp", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dữ liệu a không phù hợp",
+                        Toast.LENGTH_SHORT).show();
             } else if (b==-10) {
-                Toast.makeText(this, "Dữ liệu b không phù hợp", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dữ liệu b không phù hợp",
+                        Toast.LENGTH_SHORT).show();
             } else {
                 tvResult.setText(String.valueOf(gcd(a,b)));
             }
