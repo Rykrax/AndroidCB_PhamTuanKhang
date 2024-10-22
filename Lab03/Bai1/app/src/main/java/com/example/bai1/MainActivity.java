@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnSearch;
+    Button btnSearch, btnCall;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnSearch = findViewById(R.id.btnSearch);
+        btnCall = findViewById(R.id.btnCall);
 
         btnSearch.setOnClickListener(view -> {
 //            Intent intent = new Intent();
@@ -32,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
 //            intent.setData(Uri.parse("https://www.google.com/"));
 
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/"));
+            startActivity(intent);
+        });
+
+        btnCall.setOnClickListener(view -> {
+            Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:0983404598"));
             startActivity(intent);
         });
     }
